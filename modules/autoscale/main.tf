@@ -28,7 +28,7 @@ resource "aws_security_group" "ag_security_grp" {
 
 resource "aws_launch_template" "ag_template" {
   name_prefix = "autoscale_template"
-  image_id = "ami-073130f74f5ffb161"
+  image_id = "ami-id"
   instance_type = "t3.micro"
 
   network_interfaces {
@@ -110,6 +110,7 @@ resource "aws_autoscaling_group" "my_ag" {
     propagate_at_launch = true
   }
 }
+
 
 
 
